@@ -18,8 +18,10 @@
         <!-- 动态组件 -->
         <!-- <component :is="NextTickName"></component> -->
         <!-- 按需加载组件 -->
-        <FormDemo v-if="showFormDemo"/>
-        <button @click="showFormDemo=true">按钮</button>
+        <!-- <FormDemo v-if="showFormDemo"/>
+        <button @click="showFormDemo=true">按钮</button> -->
+        <!-- keepalive -->
+        <KeepAlive/>
     </div>
 </template>
 <script>
@@ -27,13 +29,15 @@
 // import NextTick from './NextTick'
 // import SlotDemo from './SlotDemo'
 // import ScopedSlotDemo from './ScopedSlotDemo'
+import KeepAlive from './KeepAlive'
 export default {
     components:{
         // CustomVModel,
         // NextTick,
         // SlotDemo,
         // ScopedSlotDemo,
-        FormDemo:()=>import('../BaseUse/FormDemo')
+        // FormDemo:()=>import('../BaseUse/FormDemo'),
+        KeepAlive
     },
     data(){
         return {
