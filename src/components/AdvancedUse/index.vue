@@ -5,20 +5,38 @@
         <!-- 自定义 v-model -->
         <!-- <p>{{name}}</p>
         <CustomVModel v-model="name"/> -->
-        <NextTick/>
+        <!-- <NextTick/> -->
+        <!-- <SlotDemo :url="website.url">
+            {{website.title}}
+        </SlotDemo> -->
+        <!-- 作用域插槽: 父组件如何获取子组件里的数据 -->
+        <ScopedSlotDemo :url="website.url">
+            <!-- {{website.title}} -->
+            <template v-slot="slotProps">
+                {{slotProps.slotData.title}}
+            </template>
+        </ScopedSlotDemo>
     </div>
 </template>
 <script>
 // import CustomVModel from './CustomVModel'
-import NextTick from './NextTick'
+// import NextTick from './NextTick'
+// import SlotDemo from './SlotDemo'
+import ScopedSlotDemo from './ScopedSlotDemo'
 export default {
     components:{
         // CustomVModel,
-        NextTick
+        // NextTick,
+        // SlotDemo,
+        ScopedSlotDemo
     },
     data(){
         return {
-            name:'yx'
+            website:{
+                url:'https://qq.weatherol.com.cn',
+                title:'yaxue',
+                subTitle:'气象在线科技有限公司'
+            }
         }
     }
 }
