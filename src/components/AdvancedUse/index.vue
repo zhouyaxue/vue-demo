@@ -21,7 +21,9 @@
         <!-- <FormDemo v-if="showFormDemo"/>
         <button @click="showFormDemo=true">按钮</button> -->
         <!-- keepalive -->
-        <KeepAlive/>
+        <!-- <KeepAlive/> -->
+        <!-- minxin -->
+        <MinxinDemo/>
     </div>
 </template>
 <script>
@@ -29,7 +31,8 @@
 // import NextTick from './NextTick'
 // import SlotDemo from './SlotDemo'
 // import ScopedSlotDemo from './ScopedSlotDemo'
-import KeepAlive from './KeepAlive'
+// import KeepAlive from './KeepAlive'
+import MinxinDemo from './MinxinDemo'
 export default {
     components:{
         // CustomVModel,
@@ -37,7 +40,8 @@ export default {
         // SlotDemo,
         // ScopedSlotDemo,
         // FormDemo:()=>import('../BaseUse/FormDemo'),
-        KeepAlive
+        // KeepAlive,
+        MinxinDemo
     },
     data(){
         return {
